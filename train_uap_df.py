@@ -149,7 +149,7 @@ def train(param):
         start_time = time.time()
         attack = UniversalPerturbation(classifier=classifier, eps=param.epsilon, max_iter=num_epoch, delta=0.2,
                                        batch_size=param.batch_size, norm='inf')
-        adv_x_train = attack.generate(x_train, y_train)
+        adv_x_train = attack.generate(x_train)
         adv_perturbation = attack.noise
         end_time = time.time()
         print('Generated perturbation in %.4f seconds!'%(end_time-start_time))
