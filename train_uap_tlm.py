@@ -70,7 +70,7 @@ def train(param):
         print(f'FOLD {fold}')
         print('-----------------------')
 
-        # Sample elements randomly from a given list of ids, no replacement.
+        # Select sample elements randomly 
         train_ids, val_ids = train_test_split(train_ids, test_size=0.25, shuffle=True, random_state=0)
         train_subsampler = torch.utils.data.SubsetRandomSampler(train_ids)
         val_subsampler = torch.utils.data.SubsetRandomSampler(val_ids)
