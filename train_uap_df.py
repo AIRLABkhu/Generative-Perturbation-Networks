@@ -104,8 +104,8 @@ def train(param):
         test_subsampler = torch.utils.data.SubsetRandomSampler(test_ids)
 
         # Define data loaders for training and testing data in this fold
-        train_loader = torch.utils.data.DataLoader(data_set, batch_size=param.batch_size, sampler=train_subsampler, num_workers=12)
-        test_loader = torch.utils.data.DataLoader(data_set, batch_size=param.batch_size, sampler=test_subsampler, num_workers=12)
+        train_loader = torch.utils.data.DataLoader(data_set, batch_size=batch_size, sampler=train_subsampler, num_workers=12)
+        test_loader = torch.utils.data.DataLoader(data_set, batch_size=batch_size, sampler=test_subsampler, num_workers=12)
 
         for data, labels in train_loader:
             for eeg in data.numpy():
@@ -147,7 +147,7 @@ def train(param):
 
         # Generate adversarial train examples & perturbation
         start_time = time.time()
-        attack = UniversalPerturbation(classifier=classifier, eps=param.epsilon, max_iter=5, delta=0.2,
+        attack = UniversalPerturbation(classifier=classifier, eps=param.epsilon, max_iter=num_epoch, delta=0.2,
                                        batch_size=param.batch_size, norm='inf')
         adv_x_train = attack.generate(x_train)
         adv_perturbation = attack.noise
