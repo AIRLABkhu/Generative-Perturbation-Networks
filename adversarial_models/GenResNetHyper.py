@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 
+
 # Define a resnet block
 class ZeroPadBlockHyper(nn.Module):
     expansion = 1
