@@ -61,8 +61,8 @@ The offical implementaion(Tensorflow ver.) can be found here: https://github.com
 - `GenResNetHyper.py` : Implementations of conditional Generative Perturbation Networks
 - `GenResNetMulti.py` : Implementations of multiple Generative Perturbation Networks
 > Models for EEG classification -> `./models'
-- `EEGNet.py` : Pytorch Implementaion of EEGNet
-- `DeepConvNet.py` : Pytorch Implementation of DeepConvNet
+- `EEGNet.py` : Pytorch Implementaion of *EEGNet a compact convolutional neural network, JOURANL OF NEURAL ENGINEERING, 2018, V.Lawhern et al.* Origianl Implemenation: https://github.com/vlawhern/arl-eegmodels
+- `DeepConvNet.py` : Pytorch Implementation of DeepConvNet. Origianl Implemenation: https://github.com/vlawhern/arl-eegmodels
 - `ShallowConvNet.py`: Pytorch Implementation of ShallowConvNet
 - `TIDNet.py` : Pytorch Implementaion of TIDNet
 - `VGG.py` : Pytorch Implementaion of VGG
