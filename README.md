@@ -26,7 +26,9 @@ achieved great success in classifying EEG-based BCI systems. However, DNNs are v
 
 # Result
 ## Topoplots of adversarial exampels from mGPN
+![image](https://user-images.githubusercontent.com/50229148/170933337-6df1c5bc-a0c8-41c4-8298-2fe96ae6cb35.png)
 
 # Usage
 - `train_classifier.py` : Train victim models for EEG classification. EEGNET, Deep/Shallow ConvNet, TIDNET, VGG, ResNet were used as victim models.
-- `train_uap_df.py` : Pytorch Implementation of 'Universal adversarial perturbations, CVPR, 2017, Moosavi et al.'
+- `train_uap_df.py` : Pytorch Implementation of *Universal adversarial perturbations, CVPR, 2017, Moosavi et al.* `Adversarial-Robustness-Toolbox` library was used for Deepfool based attacks.
+- `train_uap_tlm.py` : Pytorch Implementation of *Universal adversarial perturbations for CNN classifiers in EEG-based BCIs, JOURNAL OF NEURAL ENGINEERING, 2021, Z.Liu et al.* The offical implementaion(Tensorflow ver.) can be found here: https://github.com/ZihanLiu95/UAP_EEG. 
