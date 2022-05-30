@@ -61,9 +61,9 @@ The offical implementaion(Tensorflow ver.) can be found here: https://github.com
 - `GenResNetHyper.py` : Implementations of conditional Generative Perturbation Networks
 - `GenResNetMulti.py` : Implementations of multiple Generative Perturbation Networks
 > Models for EEG classification -> `./models'
-- `EEGNet.py` : Pytorch Implementaion of *EEGNet a compact convolutional neural network, JOURANL OF NEURAL ENGINEERING, 2018, V.Lawhern et al.* Origianl Implemenation: https://github.com/vlawhern/arl-eegmodels
-- `DeepConvNet.py` : Pytorch Implementation of DeepConvNet. Origianl Implemenation: https://github.com/vlawhern/arl-eegmodels
-- `ShallowConvNet.py`: Pytorch Implementation of ShallowConvNet
-- `TIDNet.py` : Pytorch Implementaion of TIDNet
-- `VGG.py` : Pytorch Implementaion of VGG
-- `ResNet.py` : Pytorch Implementaion of ResNet
+- `EEGNet.py` : Pytorch Implementaion of *EEGNet a compact convolutional neural network, JOURANL OF NEURAL ENGINEERING, 2018, V.Lawhern et al.*<br>
+Origianl Implemenation => https://github.com/vlawhern/arl-eegmodels
+- `DeepConvNet.py & ShallowConvNet.py` : Pytorch Implementation of *Deep Learning With Convolutional Neural Networks for EEG Decoding and Visualization, Human Brain Mapping, 2017, Schirrmeister et al.*
+- `TIDNet.py` : Pytorch Implementaion of *Thinker invariance: enabling deep neural networks for BCI across more people, JOURANL OF NEURAL ENGINEERING, 2020, D.Kostas  et al.*
+- `VGG.py` : VGG Implementation tailored for EEG classification TorchVision Library.
+- `ResNet.py` : ResNet Implemenation tailored for EEG classifcation with TorchVision Library.
