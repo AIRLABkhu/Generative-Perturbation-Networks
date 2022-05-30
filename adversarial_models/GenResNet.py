@@ -55,6 +55,7 @@ class GenResNet(nn.Module):
         elif norm_type == 'instance':
             norm_layer = nn.InstanceNorm2d
 
+            
         if act_type == 'selu':
             self.act = nn.SELU(True)
         else:
