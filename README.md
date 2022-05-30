@@ -12,18 +12,21 @@ achieved great success in classifying EEG-based BCI systems. However, DNNs are v
 ![image](https://user-images.githubusercontent.com/50229148/170931136-db19f146-4f73-40ab-8311-0ebbe36077b2.png)
 
 - Signal-Specific generation : Input as a real EEG trials
-- Signal-Agnoistic generation : Input as a random noise 
+- Signal-Agnoistic generation : Input as a random noise <br>
 ![image](https://user-images.githubusercontent.com/50229148/170930773-a2f59d1a-e5a1-469e-ad7c-b692d3264239.png)
 
 ## Conditional Generative Perturbation Network(cGPN)
 - cGPN recieves bith a signal and condition vector as input for defining the perturbation
-- cGPN generates perturbations for all types of classification model, attack type, and target classes for one dataset
+- cGPN generates perturbations for all types of classification model, attack type, and target classes for one dataset <br>
 ![image](https://user-images.githubusercontent.com/50229148/170931926-1a1e2b4c-053e-41c6-bd34-2349e692cf02.png)
 
 ## Multiple Generative Perturbations Network(mGPN)
-- mGPN generates all perturbations for an input EEG trial at once.
+- mGPN generates all perturbations for an input EEG trial at once. <br>
 ![image](https://user-images.githubusercontent.com/50229148/170931960-b8b89be5-5cec-4c73-8fa0-77a73b61f8ea.png)
 
 # Result
-
 ## Topoplots of adversarial exampels from mGPN
+
+# Usage
+- `train_classifier.py` : Train victim models for EEG classification. EEGNET, Deep/Shallow ConvNet, TIDNET, VGG, ResNet were used as victim models.
+- `train_uap_df.py` : Pytorch Implementation of 'Universal adversarial perturbations, CVPR, 2017, Moosavi et al.'
