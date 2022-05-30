@@ -25,6 +25,20 @@ achieved great success in classifying EEG-based BCI systems. However, DNNs are v
 ![image](https://user-images.githubusercontent.com/50229148/170931960-b8b89be5-5cec-4c73-8fa0-77a73b61f8ea.png)
 
 # Result
+
+## Accuray and Fooling Rate
+- Accuracy : Top 1 accuracy of classification
+- Fooling Rate : For non-targeted only. Prediction difference from original prediction
+
+### Comparision of **DF-UAP, TLM, GPN-SA** methods
+![image](https://user-images.githubusercontent.com/50229148/170942206-3fc924c8-a374-4cdc-93ac-4facceae3602.png)
+
+### Comparision of **GPN-SS, cGPN, mGPN** methods
+![image](https://user-images.githubusercontent.com/50229148/170942328-68eade0e-f9f1-4671-ae69-5ef77b245d98.png)
+
+## Transferability
+![image](https://user-images.githubusercontent.com/50229148/170943025-13ae6a14-285f-4a7b-a6ee-170bb6c33bcf.png)
+
 ## Topoplots of adversarial exampels from mGPN
 ![image](https://user-images.githubusercontent.com/50229148/170933337-6df1c5bc-a0c8-41c4-8298-2fe96ae6cb35.png)
 
