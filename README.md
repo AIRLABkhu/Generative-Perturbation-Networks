@@ -38,9 +38,21 @@ The offical implementaion(Tensorflow ver.) can be found here: https://github.com
 - `train_GPN_SA.py` : Train GPN for Signal Agnositic perturbations generation.
 - `train_cGPN.py` : Train conditional GPN(cGPN) for generating perturbations with conditional flags.
 - `train_mGPN.py` : Train multiple GPN(mGPN) for generating perturbations at once.
+<br>
 > Evaluate
 - `eval_classifier.py` : Evaluate accuacy of trained victim models for EEG classification.
 - `eval_GPN_SS&SA.py` : Evaluate accuracy of adversarial attacks with GPN on victim models.
 - `eval_GPN_SS&SA_cross.py` : Evaluate Transferability of Universal Perturbations.
+<br>
 > Model Architecture Implementation -> `./adversarial models'
-- `GenResNet.py` : Generative Perturbation Networks for SS and SA attacks
+- `GenResNet.py` : Implementations of Generative Perturbation Networks for SS and SA attacks
+- `GenResNetHyper.py` : Implementations of conditional Generative Perturbation Networks
+- `GenResNetMulti.py` : Implementations of multiple Generative Perturbation Networks
+<br>
+> Models for EEG classification -> `./models'
+- `EEGNet.py` : Pytorch Implementaion of EEGNet
+- `DeepConvNet.py` : Pytorch Implementation of DeepConvNet
+- `ShallowConvNet.py`: Pytorch Implementation of ShallowConvNet
+- `TIDNet.py` : Pytorch Implementaion of TIDNet
+- `VGG.py` : Pytorch Implementaion of VGG
+- `ResNet.py` : Pytorch Implementaion of ResNet
