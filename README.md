@@ -29,6 +29,18 @@ achieved great success in classifying EEG-based BCI systems. However, DNNs are v
 ![image](https://user-images.githubusercontent.com/50229148/170933337-6df1c5bc-a0c8-41c4-8298-2fe96ae6cb35.png)
 
 # Usage
+> Train
 - `train_classifier.py` : Train victim models for EEG classification. EEGNET, Deep/Shallow ConvNet, TIDNET, VGG, ResNet were used as victim models.
 - `train_uap_df.py` : Pytorch Implementation of *Universal adversarial perturbations, CVPR, 2017, Moosavi et al.* `Adversarial-Robustness-Toolbox` library was used for Deepfool based attacks.
-- `train_uap_tlm.py` : Pytorch Implementation of *Universal adversarial perturbations for CNN classifiers in EEG-based BCIs, JOURNAL OF NEURAL ENGINEERING, 2021, Z.Liu et al.* The offical implementaion(Tensorflow ver.) can be found here: https://github.com/ZihanLiu95/UAP_EEG. 
+- `train_uap_tlm.py` : Pytorch Implementation of *Universal adversarial perturbations for CNN classifiers in EEG-based BCIs, JOURNAL OF NEURAL ENGINEERING, 2021, Z.Liu et al.*<br>
+The offical implementaion(Tensorflow ver.) can be found here: https://github.com/ZihanLiu95/UAP_EEG. 
+- `train_GPN_SS.py` : Train GPN for Signal Specific perturbations generation.
+- `train_GPN_SA.py` : Train GPN for Signal Agnositic perturbations generation.
+- `train_cGPN.py` : Train conditional GPN(cGPN) for generating perturbations with conditional flags.
+- `train_mGPN.py` : Train multiple GPN(mGPN) for generating perturbations at once.
+> Evaluate
+- `eval_classifier.py` : Evaluate accuacy of trained victim models for EEG classification.
+- `eval_GPN_SS&SA.py` : Evaluate accuracy of adversarial attacks with GPN on victim models.
+- `eval_GPN_SS&SA_cross.py` : Evaluate Transferability of Universal Perturbations.
+> Model Architecture Implementation -> `./adversarial models'
+- `GenResNet.py` : Generative Perturbation Networks for SS and SA attacks
