@@ -69,5 +69,5 @@ Origianl Implemenation => https://github.com/vlawhern/arl-eegmodels
 - `ResNet.py` : ResNet Implemenation tailored for EEG classifcation with TorchVision Library.
 > Data Pre-Processing -> `./data_processing`
 - `amigos_cvt_preproc_mat_npy.py` : Convert .mat format into .npy format.
-- `amigos_slice_npy_in_nsec.py` : Split 4s EEG streams into 1sec segments. 
+- `amigos_slice_npy_in_nsec.py` & `deap_slice_in_nsec.py`& `physionet_slice_npy_in_1sec.py` : Split EEG streams into 1sec segments. 
 - `merge_labels.py` : Label signals into 4 classes based on value of arousal and valence. 
