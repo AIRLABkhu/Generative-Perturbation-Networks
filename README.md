@@ -67,3 +67,7 @@ Origianl Implemenation => https://github.com/vlawhern/arl-eegmodels
 - `TIDNet.py` : Pytorch Implementaion of *Thinker invariance: enabling deep neural networks for BCI across more people, JOURANL OF NEURAL ENGINEERING, 2020, D.Kostas  et al.*
 - `VGG.py` : VGG Implementation tailored for EEG classification TorchVision Library.
 - `ResNet.py` : ResNet Implemenation tailored for EEG classifcation with TorchVision Library.
+> Data Pre-Processing -> `./data_processing`
+- `amigos_cvt_preproc_mat_npy.py` : Convert .mat format into .npy format.
+- `amigos_slice_npy_in_nsec.py` : Split 4s EEG streams into 1sec segments. 
+- `merge_labels.py` : Label signals into 4 classes based on value of arousal and valence. 
