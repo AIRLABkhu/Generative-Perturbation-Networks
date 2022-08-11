@@ -225,7 +225,7 @@ def train(param):
                         output = model.forward(train_x_adv)
 
                         if attack_type == 'non-targeted':
-                            loss = torch.log(loss_func(1-F.softmax(output, dim=1), ))
+                            loss = torch.log(loss_func(1-F.softmax(output, dim=1), target_label))
                         elif attack_type == 'targeted':
                             loss = loss_func(output, target_label)
 
