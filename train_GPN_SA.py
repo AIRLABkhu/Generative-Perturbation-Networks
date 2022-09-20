@@ -189,8 +189,15 @@ def train(param):
 
                 #  Generate perturbation
                 adv_exam_cuda = generator(cur_noise_cuda) # range : -1 ~ 1
-                adv_exam_cuda_perturbation = adv_exam_cuda * norm_limit  # range : -norm_limit ~ norm_limit
-
+                # adv_exam_cuda_perturbation = adv_exam_cuda * norm_limit  # range : -norm_limit ~ norm_limit
+                # Scale
+                norm_exam = adv_exam_cuda.view(adv_exam_cuda.shape[0], -1)
+                if norm_type == 'inf':
+                    norm_exam = torch.norm(norm_exam, p=float('inf'), dim=1)
+                elif norm_type == 'L2':
+                    norm_exam = torch.norm(norm_exam, p=2, dim=1)
+                adv_exam_cuda = torch.mul(adv_exam_cuda / norm_exam.view(adv_exam_cuda.shape[0], 1, 1, 1), norm_limit)
+                
                 train_x_adv = torch.add(train_x.cuda(), adv_exam_cuda_perturbation)
 
                 # Do clamping per channel
