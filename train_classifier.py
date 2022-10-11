@@ -87,8 +87,7 @@ def train(param):
             print('VGG')
             model = vgg_eeg(pretrained=False, num_classes=param.num_class)
             optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=1e-3)
-
-        model.train()
+        
         model.cuda()
 
         loss_total = 0.0
@@ -108,6 +107,8 @@ def train(param):
             t0 = time.time()
 
             for train_x, train_y in train_loader:
+                
+                model.train()
 
                 train_x = train_x.cuda()
                 train_y = train_y.cuda()
@@ -147,7 +148,6 @@ def train(param):
                 test_x = test_x.cuda()
                 test_y = test_y.cuda()
 
-                model.eval()
                 with torch.no_grad():
                     output = model.forward(test_x)
                     output_sm = F.softmax(output, dim=1)
